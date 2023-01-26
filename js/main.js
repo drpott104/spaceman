@@ -78,3 +78,4 @@ playAgn.addEventListener('click', function() {
     spaceman.style.visibility = 'visible'
     message.innerText = 'Pick a letter'
 })
+
