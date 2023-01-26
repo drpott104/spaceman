@@ -1,7 +1,7 @@
 # Spaceman
 A new twist on an old classic. Pick letters to guess a randomly generated word. Be careful, you only have 6 guesses
 
-Screenshot
+##Screenshot
 <div>
 <img src="https://i.imgur.com/cA8IcEB.png">
 </div>
