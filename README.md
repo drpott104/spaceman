@@ -2,7 +2,9 @@
 A new twist on an old classic. Pick letters to guess a randomly generated word. Be careful, you only have 6 guesses
 
 Screenshot
-![game screenshot](https://i.imgur.com/cA8IcEB.png)
+<div>
+<img src="https://i.imgur.com/cA8IcEB.png">
+</div>
 
 ## Technologies Used
 	•	JavaScript
