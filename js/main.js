@@ -17,16 +17,18 @@ for (let i=0; i<secretWord.length; i++) {
     const letterEl = document.createElement('div')
     wordEl.appendChild(letterEl)
 }
-console.log(secretWord)
+
+function checkLetter(guess) {
+    return guess === word
+}
+
 letters.addEventListener('click', function(event) {
     if (event.target.tagName !== 'BUTTON') return
     const guess = event.target.innerText.toLowerCase();
     for (let i=0; i<wordArr.length; i++) {
-        
         wordArr.some(function() {
             if (guess === wordArr[i]) {
                 document.querySelector(`#secret-word :nth-child(${i+1})`).innerText = guess.toUpperCase()
-                
             }
         })
     }
@@ -54,9 +56,6 @@ letters.addEventListener('click', function(event) {
     }
 })
         
-function checkLetter(guess) {
-    return guess === word
-}
 
 playAgn.addEventListener('click', function() {
     numRight = 0;
