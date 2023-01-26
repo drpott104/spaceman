@@ -72,12 +72,19 @@ h1, h3 {
 }
 #secret-word {
     display: flex;
-
 }
 #secret-word > div {
+    justify-content: center;
+    align-items: center;
     width: 50px;
     height: 50px;
     border-bottom: 5px solid white;
     margin-bottom: 10px;
     margin: 10px;
+    color: lightblue;
+    text-align: center;
+    font-size: 30px;
+}
+#playAgn {
+    visibility: hidden;
 }
