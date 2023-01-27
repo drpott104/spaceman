@@ -12,7 +12,7 @@ A new twist on an old classic. Pick letters to guess a randomly generated word. 
 	•	CSS
 
 ## Getting Started
-https://drpott104.github.io/spaceman/
+https://drpott104.github.io/spacemane/
 
 ## Next Steps
 	•	Hint button
