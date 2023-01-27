@@ -34,7 +34,6 @@ letters.addEventListener('click', function(event) {
     }
     document.getElementById(guess).style.visibility = 'hidden'
     if (secretWord.indexOf(guess) === -1) {
-        console.log('wrong')
         numWrong++
         if (numWrong > 5) {
             message.innerText = 'Sorry, you reached the maximum number of guesses'
@@ -43,7 +42,7 @@ letters.addEventListener('click', function(event) {
             }
             playAgn.style.visibility = 'visible'
         }
-        wrongGuesses += guess
+        wrongGuesses += guess + ' '
         document.querySelector('span').innerText = wrongGuesses
         document.getElementById(`${bodyParts[numWrong - 1]}`).style.visibility = 'hidden'
         return
@@ -52,13 +51,18 @@ letters.addEventListener('click', function(event) {
         if (numRight === wordArr.length) {
             message.innerHTML = 'Congratulations!!! You guessed the word!'
             playAgn.style.visibility = 'visible'
+            for (let i=0; i<26; i++) {
+                document.querySelector(`#letters :nth-Child(${i+1})`).style.visibility = 'hidden'
+            }
         }
     }
 })
-        
+
 
 playAgn.addEventListener('click', function() {
     numRight = 0;
+    numWrong = 0
+    wrongGuesses = ''
     for (let i=0; i<wordArr.length; i++) {
         let letter = document.querySelector(`#secret-word :nth-child(${1})`)
         letter.parentNode.removeChild(letter)
@@ -69,12 +73,14 @@ playAgn.addEventListener('click', function() {
         const letterEl = document.createElement('div')
         wordEl.appendChild(letterEl)
     }
+    document.querySelector('span').innerText = ''
+    for (let i=0; i<6; i++) {
+        document.getElementById(`${bodyParts[i]}`).style.visibility = 'visible'
+    }
     for (let i=0; i<26; i++) {
         document.querySelector(`#letters :nth-Child(${i+1})`).style.visibility = 'visible'
     }
     playAgn.style.visibility = 'hidden'
-    letters.style.visibility = 'visible'
-    spaceman.style.visibility = 'visible'
     message.innerText = 'Pick a letter'
 })
 
